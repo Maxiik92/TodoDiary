@@ -36,7 +36,9 @@ CREATE TABLE `blog`(
     `is_private` TINYINT(1) NOT NULL DEFAULT '0',
     `title` VARCHAR(255) NOT NULL,
     `description` VARCHAR(255) NOT NULL,
-    `column` LONGTEXT NOT NULL
+    `column` LONGTEXT NOT NULL,
+    `created` DATETIME NOT NULL DEFAULT 'GETDATE()',
+    `edited` DATETIME NOT NULL DEFAULT 'GETDATE()'
 );
 ALTER TABLE
     `blog` ADD PRIMARY KEY `blog_id_primary`(`id`);
