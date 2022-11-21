@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './nav-panel.component.html',
   styleUrls: ['./nav-panel.component.css'],
 })
-export class NavPanelComponent {}
+export class NavPanelComponent {
+  userName = 'DefaultUser';
+}
