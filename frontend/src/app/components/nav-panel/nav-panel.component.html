@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <img class="logo" src="../../../assets/PAD-logo.png" />
+  <div class="center">
+    <div class="buttons">
+      <button mat-button>Tasks</button>
+      <button mat-button>Blog</button>
+    </div>
+    <div class="search">
+      <div class="form-outline">
+        <input type="search" id="form1" class="form-control" />
+        <label class="form-label" for="form1">Search</label>
+      </div>
+      <button type="button" class="btn btn-primary">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+  </div>
+  <div class="left">
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  height: 4rem;
+  background-color: #007acca3;
+  justify-content: space-between;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.center .buttons {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.center .buttons button {
+  margin: auto;
+  font-size: 1.5rem;
+  border-radius: 15px;
+}
+
+.center .search {
+  font-size: 1.5rem;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+}
+
+.center .search label {
+  color: white;
+  font-family: Roboto;
+  margin: auto;
+  font-weight: 500;
+}
+
+.center .search input {
+  padding-left: 20px;
+  height: 60%;
+  outline: none;
+  font-size: 1.2rem;
+}
+
+.left {
+  padding-right: 5%;
+}
+
+.logo {
+  padding-left: 5%;
+}
