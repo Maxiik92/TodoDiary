@@ -10,15 +10,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //material.io imports
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { WeatherComponent } from './components/homepage/weather/weather.component';
 
 @NgModule({
-  declarations: [AppComponent, NavPanelComponent, LandingPageComponent],
+  declarations: [AppComponent, NavPanelComponent, LandingPageComponent, HomepageComponent, WeatherComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatMenuModule,
     MatButtonModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

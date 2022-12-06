@@ -3,7 +3,7 @@
   width: 100%;
   margin: 0;
   height: 4rem;
-  background-color: #007acca3;
+  background-color: yellow;
   justify-content: space-between;
 }
 
@@ -23,7 +23,12 @@
 .center .buttons button {
   margin: auto;
   font-size: 1.5rem;
-  border-radius: 15px;
+  border-radius: 5px;
+  background-color: #515151;
+  padding: 0 1em;
+}
+.center .buttons button:hover {
+  filter: brightness(80%);
 }
 
 .center .search {
@@ -34,7 +39,7 @@
 }
 
 .center .search label {
-  color: white;
+  color: #515151;
   font-family: Roboto;
   margin: auto;
   font-weight: 500;
@@ -54,11 +59,23 @@
 .right {
   padding-right: 5%;
   display: flex;
+  width: 15%;
 }
 
 .right button {
   font-size: 1.5rem;
   margin: auto;
+  color: white;
+  background-color: #515151;
+  padding: 0 1em;
+}
+
+.right button:hover {
+  filter: brightness(80%);
+}
+
+.right mat-menu button {
+  width: 200px;
 }
 
 .logo {
