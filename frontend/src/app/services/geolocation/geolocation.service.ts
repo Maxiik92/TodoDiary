@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environment/environment';
 import { lastValueFrom } from 'rxjs';
+import { IpInterface, LocationInterface } from 'src/app/interfaces/location';
 
 @Injectable({
   providedIn: 'root',
@@ -26,13 +26,16 @@ export class GeolocationService {
     return lastValueFrom(response);
   }
 
-  getLocationData() {
-    const locationData = this.getIpAdress().then((res: any) => {
-      const data = this.getLocation(res.ip).then((res) => {
-        return res;
-      });
+  async getLocationData() {
+    const jsonRes: Object = await this.getIpAdress();
+    const res = jsonRes as IpInterface;
+    try {
+      const res_1: Object = await this.getLocation(res.ip);
+      const data = res_1 as LocationInterface;
       return data;
-    });
-    return locationData;
+    } catch (e) {
+      const msg = 'Error occured in GeoLocation process! ';
+      return { msg: msg + e };
+    }
   }
 }

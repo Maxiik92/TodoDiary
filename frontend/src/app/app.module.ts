@@ -13,9 +13,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { WeatherComponent } from './components/homepage/weather/weather.component';
+import { NewsComponent } from './components/homepage/news/news.component';
 
 @NgModule({
-  declarations: [AppComponent, NavPanelComponent, LandingPageComponent, HomepageComponent, WeatherComponent],
+  declarations: [AppComponent, NavPanelComponent, LandingPageComponent, HomepageComponent, WeatherComponent, NewsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
