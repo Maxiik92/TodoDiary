@@ -1,1 +1,12 @@
-<p>weather works!</p>
+<div class="wrapper">
+  <div *ngIf="!weatherAvailable">
+    <mat-spinner></mat-spinner>
+  </div>
+  <div *ngIf="weatherAvailable">
+    <p>{{ weatherData!.city }}</p>
+    <weather-tab
+      *ngFor="let weatherTab of weatherData!.days"
+      [day]="weatherTab"
+    ></weather-tab>
+  </div>
+</div>

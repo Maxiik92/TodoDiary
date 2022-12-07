@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LocationInterface } from 'src/app/interfaces/location';
+import { Weather } from 'src/app/interfaces/weather';
 import { GeolocationService } from 'src/app/services/geolocation/geolocation.service';
 import { WeatherService } from 'src/app/services/weather.service';
 
@@ -21,26 +22,9 @@ export class HomepageComponent implements OnInit {
     this.location =
       (await this.geoLocation.getLocationData()) as unknown as LocationInterface;
     this.weather = await this.getWeather();
-    console.log(this.weather);
   }
 
   async getWeather() {
     return await this.weatherService.getWeather(this.location!.city);
   }
-  /*
-  async getWeather(city: string) {
-    const data = await this.weatherService
-      .getWeather(city)
-      .then((res: any) => {
-        if (res.errorCode) {
-          return 'Error in Get Weather Process! ' + res.message;
-        }
-        console.log(res);
-        return res.location;
-      })
-      .catch((e) => {
-        return 'Error in Get Weather Process! ' + e;
-      });
-    return data;
-  }*/
 }
