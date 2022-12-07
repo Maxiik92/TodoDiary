@@ -18,6 +18,7 @@ import { NewsComponent } from './components/homepage/news/news.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { HometaskpanelComponent } from './components/homepage/hometaskpanel/hometaskpanel.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     WeatherComponent,
     NewsComponent,
     WeatherTabComponent,
+    HometaskpanelComponent,
   ],
   imports: [
     BrowserModule,

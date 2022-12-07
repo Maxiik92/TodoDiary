@@ -4,9 +4,11 @@
   </div>
   <div *ngIf="weatherAvailable">
     <p>{{ weatherData!.city }}</p>
-    <weather-tab
-      *ngFor="let weatherTab of weatherData!.days"
-      [day]="weatherTab"
-    ></weather-tab>
+    <div class="days">
+      <weather-tab
+        *ngFor="let weatherTab of weatherData!.days"
+        [day]="weatherTab"
+      ></weather-tab>
+    </div>
   </div>
 </div>
