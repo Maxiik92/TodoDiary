@@ -9,7 +9,7 @@ import { lastValueFrom } from 'rxjs';
 })
 export class WeatherService {
   API_KEY = environment.WEATHER_API_KEY;
-  url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/forecast?&aggregateHours=24&unitGroup=metric&shortColumnNames=false&contentType=json&key=${this.API_KEY}&locations=`;
+  url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/forecast?&aggregateHours=24&unitGroup=metric&shortColumnNames=false&contentType=json&iconSet=icons1&key=${this.API_KEY}&locations=`;
   constructor(private http: HttpClient) {}
 
   getWeather(city: string) {

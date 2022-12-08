@@ -2,6 +2,7 @@ export interface Day {
   date: string;
   temperature: string;
   condition: string;
+  icon: string;
 }
 
 export class Weather {
@@ -13,10 +14,13 @@ export class Weather {
     this.city = city;
     console.log(city);
     for (let i: number = 0; i < 6; i++) {
-      let day: Day = { date: '', temperature: '', condition: '' };
-      day.date = data.locations[city].values[i].datetimeStr;
-      day.temperature = data.locations[city].values[i].temp;
-      day.condition = data.locations[city].values[i].conditions;
+      let day: Day = { date: '', temperature: '', condition: '', icon: '' };
+      const startPoint = data.locations[city].values[i];
+      day.date = startPoint.datetimeStr;
+      day.temperature = startPoint.temp;
+      day.condition = startPoint.conditions;
+      day.icon =
+        '../../../../../assets/weather-icons/' + startPoint.icon + '.svg';
       this.days!.push(day);
     }
   }
