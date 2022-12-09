@@ -21,7 +21,7 @@ export class Weather {
       day.condition = startPoint.conditions;
       day.icon =
         '../../../../../assets/weather-icons/' + startPoint.icon + '.svg';
-      this.days!.push(day);
+      this.days.push(day);
     }
   }
 }

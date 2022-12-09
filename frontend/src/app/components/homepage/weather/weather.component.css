@@ -6,6 +6,12 @@
   border-radius: 10px;
 }
 
+.wrapper mat-spinner {
+  width: 100%;
+  margin: auto;
+  height: 100%;
+}
+
 .days {
   display: flex;
   height: 100%;

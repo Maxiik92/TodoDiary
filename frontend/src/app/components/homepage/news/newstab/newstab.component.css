@@ -1,0 +1,7 @@
+.wrapper {
+  object-fit: contain;
+}
+
+.wrapper img {
+  max-width: 30%;
+}

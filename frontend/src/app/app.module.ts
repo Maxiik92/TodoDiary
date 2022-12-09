@@ -13,12 +13,13 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { WeatherComponent } from './components/homepage/weather/weather.component';
 import { WeatherTabComponent } from './components/homepage/weather/weather-tab/weather-tab.component';
 import { NewsComponent } from './components/homepage/news/news.component';
+import { NewstabComponent } from './components/homepage/news/newstab/newstab.component';
+import { HometaskpanelComponent } from './components/homepage/hometaskpanel/hometaskpanel.component';
 
 //material.io imports
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { HometaskpanelComponent } from './components/homepage/hometaskpanel/hometaskpanel.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { HometaskpanelComponent } from './components/homepage/hometaskpanel/home
     NewsComponent,
     WeatherTabComponent,
     HometaskpanelComponent,
+    NewstabComponent,
   ],
   imports: [
     BrowserModule,

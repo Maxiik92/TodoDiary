@@ -16,6 +16,7 @@ export class WeatherComponent implements OnInit, OnChanges {
   @Input() weather?: any;
   weatherAvailable = false;
   weatherData?: Weather;
+  test = false;
   ngOnInit() {}
 
   ngOnChanges(changes: SimpleChanges): void {

@@ -1,1 +1,12 @@
-<p>news works!</p>
+<div class="wrapper">
+  <h2>Whats New?</h2>
+  <div *ngIf="!newsAvailable">
+    <mat-spinner></mat-spinner>
+  </div>
+  <div *ngIf="newsAvailable">
+    <newstab
+      *ngFor="let article of newsData!.articleArr"
+      [article]="article"
+    ></newstab>
+  </div>
+</div>

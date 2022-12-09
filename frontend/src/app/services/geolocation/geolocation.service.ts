@@ -9,7 +9,7 @@ import { IpInterface, LocationInterface } from 'src/app/interfaces/location';
 })
 export class GeolocationService {
   ipUrl = 'http://api.ipify.org/?format=json';
-  APIkey = environment.GEOLOCATION_API_KEY;
+  private APIkey = environment.GEOLOCATION_API_KEY;
   geoUrl = `https://ipgeolocation.abstractapi.com/v1/?api_key=${this.APIkey}&ip_address=`;
   ipAddress = '';
 

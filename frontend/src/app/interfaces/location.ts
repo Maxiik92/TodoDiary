@@ -1,6 +1,6 @@
 export interface LocationInterface {
   city: string;
-  country: string;
+  country_code: string;
   region: string;
   msg?: string;
 }
