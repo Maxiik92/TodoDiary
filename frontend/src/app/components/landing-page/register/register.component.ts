@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'register',
@@ -14,6 +15,8 @@ export class RegisterComponent {
   emailUsed = false;
   loginUsed = false;
 
+  constructor(private router: Router) {}
+
   onSubmit(form: NgForm) {
     this.loginUsed = false;
     this.emailUsed = false;
@@ -25,7 +28,11 @@ export class RegisterComponent {
       user_email: form.value.email,
     };
     console.log(user);
+    setTimeout(() => {
+      this.router.navigate(['home']);
+    }, 3000);
   }
+
   toogle() {
     this.show = !this.show;
     this.show ? (this.attribute = 'text') : (this.attribute = 'password');

@@ -2,8 +2,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  padding: 32px 102px;
+}
+
+.password-hidden,
+.password-visible {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  top: -42px;
+  right: -380px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+.password-hidden {
+  background-image: url("../../../../assets/pass_hidden.png");
+}
+
+.password-visible {
+  background-image: url("../../../../assets/pass_visible.png");
 }

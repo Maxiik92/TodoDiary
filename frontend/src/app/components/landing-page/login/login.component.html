@@ -1,1 +1,36 @@
-<p>login works!</p>
+<div class="wrapper">
+  <div class="form">
+    <h1>Log In</h1>
+    <p>Not a member ? Register <a routerLink="/register">here</a></p>
+    <form #logForm="ngForm" (ngSubmit)="onSubmit(logForm)">
+      <label for="email-username">e-mail or User name:</label>
+      <input
+        type="text"
+        name="email"
+        id="email-username"
+        placeholder="Enter e-mail or user name ..."
+        ngModel
+        required
+        #email="ngModel"
+      />
+      <label for="password">Password:</label>
+      <div class="password-box">
+        <input
+          [type]="attribute"
+          name="password"
+          id="password"
+          placeholder="Enter password ..."
+          ngModel
+          minlength="8"
+          required
+          #password="ngModel"
+        />
+        <div [ngClass]="[visibility]" (click)="toogle()"></div>
+      </div>
+      <p *ngIf="invalidInput" class="invalid-input">
+        E-mail / user name or password is wrong!
+      </p>
+      <button type="submit" [disabled]="!logForm.valid">SIGN IN</button>
+    </form>
+  </div>
+</div>
