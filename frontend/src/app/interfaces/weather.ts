@@ -12,7 +12,6 @@ export class Weather {
   constructor(data: any) {
     const city = Object.keys(data.locations)[0];
     this.city = city;
-    console.log(city);
     for (let i: number = 0; i < 6; i++) {
       let day: Day = { date: '', temperature: '', condition: '', icon: '' };
       const startPoint = data.locations[city].values[i];

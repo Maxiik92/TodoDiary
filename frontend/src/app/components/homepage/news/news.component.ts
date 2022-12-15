@@ -14,7 +14,6 @@ export class NewsComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['news'].currentValue !== undefined) {
       this.showNews();
-      console.log(this.newsData);
     }
   }
 

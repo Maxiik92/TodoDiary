@@ -20,10 +20,8 @@ export class WeatherComponent implements OnInit, OnChanges {
   ngOnInit() {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes['weather'].currentValue);
     if (changes['weather'].currentValue !== undefined) {
       this.showWeather();
-      console.log(this.weatherData);
     }
   }
 

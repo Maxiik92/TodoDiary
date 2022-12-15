@@ -10,7 +10,7 @@ export class News {
   articleArr: INews[] = [];
 
   constructor(data: any) {
-    for (let i: number = 0; i < data.totalResults; i++) {
+    for (let i: number = 0; i < data.articles.length; i++) {
       let article: INews = {
         title: '',
         description: '',

@@ -8,6 +8,8 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 //components
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { WeatherComponent } from './components/homepage/weather/weather.component';
@@ -15,6 +17,8 @@ import { WeatherTabComponent } from './components/homepage/weather/weather-tab/w
 import { NewsComponent } from './components/homepage/news/news.component';
 import { NewstabComponent } from './components/homepage/news/newstab/newstab.component';
 import { HometaskpanelComponent } from './components/homepage/hometaskpanel/hometaskpanel.component';
+import { RegisterComponent } from './components/landing-page/register/register.component';
+import { LoginComponent } from './components/landing-page/login/login.component';
 
 //material.io imports
 import { MatMenuModule } from '@angular/material/menu';
@@ -32,6 +36,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     WeatherTabComponent,
     HometaskpanelComponent,
     NewstabComponent,
+    RegisterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +48,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     HttpClientModule,
     MatProgressSpinnerModule,
     CommonModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
